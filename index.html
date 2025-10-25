@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="log-in container text-center w-50 my-5 py-5">
+        <h1>Smart Login System</h1>
+
+        <div class="container mt-4">
+            <input  oninput="validateInputs(this)"type="text" id="name" placeholder="Enter your name" class="form-control w-100 mx-auto mt-2 bg-transparent text-light d-none">
+        </div>
+
+        <div class="container mt-4">
+            <input oninput="validateInputs(this)" type="email" id="email" placeholder="Enter your email" class="form-control w-100 mx-auto mt-2 bg-transparent text-light">
+        </div>
+        
+        <div class="container mt-4">
+            <input oninput="validateInputs(this)" type="password" id="pass" placeholder="Enter your password" class="form-control w-100 mx-auto mt-2 bg-transparent text-light">
+        </div>
+
+        <h6 id="confirmation" class="mt-3"></h6>
+
+        <div class="container mt-4 text-center">
+            <button onclick="loginInputs()" type="button" class="btn border px-5 py-2 w-100" id="loginBtn">Login</button>
+            <button onclick="signupInputs()" type="button" class="btn border px-5 py-2 w-100 d-none" id="signupBtn">Sign up</button>
+        </div>
+
+        <h6 class="signup-link text-light mt-3"><span id="login">Don’t have an account? <a onclick="signupClick()" href="#">Sign Up</a></span>
+        <span id="signup" class="d-none">You have an account? <a onclick="loginClick()" href="#">Sign in</a></span></h6>
+    </div>   
+
+    <script src="main.js"></script>
+</body>
+</html>

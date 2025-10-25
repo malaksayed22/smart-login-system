@@ -1,0 +1,44 @@
+body{
+    background-color: rgb(36, 53, 63);
+}
+h1{
+    color: #17a2b8;
+}
+.log-in{
+    background-color: rgb(36, 53, 63);
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+::placeholder{
+    color: rgb(170, 167, 167) !important;
+}
+input:focus{
+    border-color: #17a2b8 !important;
+    box-shadow: 0 0 0 0 !important;
+}
+.btn{
+    color: #17a2b8;
+    border-color: #17a2b8 !important;
+    transition: .3s;
+}
+.btn:hover{
+    background-color: #17a2b8;
+    color: white;
+}
+.signup-link a{
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+.signup-link a::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    background-color: white;
+}
+.signup-link a:hover::after{
+    width: 100%;
+}

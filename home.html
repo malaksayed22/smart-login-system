@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body class="position-relative vh-100">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container d-flex justify-content-between">
+            <a class="navbar-brand  text-light" href="#">SMART LOGIN</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <button onclick="logout()" class="btn btn-outline-warning text-secondary" type="submit">Logout</button>
+        </div>
+    </nav>
+
+    <div class="welcome container w-50 h-25 position-absolute top-50 start-50 translate-middle d-flex align-items-center justify-content-center">
+        <h1 id="success"></h1>
+    </div>
+
+    <script>
+        var name = localStorage.getItem('loggedName');
+        if(name){
+            document.getElementById('success').innerHTML = `Welcome ${name}`;
+        }
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>
